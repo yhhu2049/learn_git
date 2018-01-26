@@ -1,4 +1,4 @@
 1. cd path(noted: /, not\)
-eg. cd D:/HelloWorld 
+eg. cd D:/HelloWorld/learngit 
 2. git add filename
 eg. git add git_command.txt
