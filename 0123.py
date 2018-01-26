@@ -47,15 +47,39 @@ Created on Tue Jan 23 23:45:15 2018
 #my_dog = Dog('Kuquan',100)
 #my_dog.sit()
 
-class lestaurant:
-    def __init__(self,restaurant_name,cuisine_type):
-        self.name = restaurant_name
-        self.type = cuisine_type
-    def describe(self):
-        print('the restaurant is ' + self.name)
-        print('the cuisine type is ' + self.type)
-    def open_restaurant(self):
-        print('Opening!!!!!!!!')
-restaurant_my = lestaurant('qingfeng','president')
-restaurant_my.describe()
-restaurant_my.open_restaurant()
+#class lestaurant:
+#    def __init__(self,restaurant_name,cuisine_type):
+#        self.name = restaurant_name
+#        self.type = cuisine_type
+#    def describe(self):
+#        print('the restaurant is ' + self.name)
+#        print('the cuisine type is ' + self.type)
+#    def open_restaurant(self):
+#        print('Opening!!!!!!!!')
+#restaurant_my = lestaurant('qingfeng','president')
+#restaurant_my.describe()
+#restaurant_my.open_restaurant()
+
+class car():
+    def __init__(self,make,model,year):
+        self.make = make
+        self.year = year
+        self.model = model
+        self.read = '0'
+    def get_describe(self):
+        long_name = str(self.year) +' '+ self.make +' '+self.model + self.read
+        return long_name
+    def change(self,mile):
+        self.read = mile
+
+class ecar(car):
+    def __init__(self,make,model,year):
+        super().__init__(make,model,year)
+        self.ele = 100
+    def ele0(self):
+        print('ele is ' + str(self.ele))
+mynewcar = ecar('china','xi',1989)
+mynewcar.ele0()
+
+
+
