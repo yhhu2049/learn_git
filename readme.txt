@@ -1,4 +1,1 @@
-Git is a distributed version control system.
-Git is free software.
-hhhhhhhhhhhhhhhhh
-aaaaaaaaaaa
+This is my python learning code.
