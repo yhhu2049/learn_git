@@ -71,15 +71,25 @@ class car():
         return long_name
     def change(self,mile):
         self.read = mile
-
+    def heh(self):
+        print('hehe')
+class battle():
+    def __init__(self,batt):
+        self.batt = batt
+    def des(self):
+        print('bat')
 class ecar(car):
     def __init__(self,make,model,year):
         super().__init__(make,model,year)
         self.ele = 100
+        self.bat = battle()
     def ele0(self):
         print('ele is ' + str(self.ele))
 mynewcar = ecar('china','xi',1989)
-mynewcar.ele0()
+mynewcar.heh()
+#mynewcar = battle(70)
+#mynewcar.batt = 70
+mynewcar.bat.des()
 
 
 
