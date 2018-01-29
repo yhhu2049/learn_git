@@ -23,3 +23,6 @@ for i in range(1,11):
 for i in range(1,11):
     dirname = 'D:/HelloWorld/learngit/create_document/学号：M' + str(i + start_num)
     os.makedirs(dirname)
+
+file = open('D:/HelloWorld/learngit/create_document/说明.txt','w')
+file.write('These are your homework!')

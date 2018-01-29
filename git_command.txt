@@ -3,5 +3,6 @@
 3. git add git_command.txt
 4. git commit -m 'comment'
 5. (once)git remote add origin git@github.com:yhhu2049/learngit.git
-5. git push origin master((first, once)git push -u origin master)
+6. git push origin master((first, once)git push -u origin master)
+7. git clone git@github:yhhu2049/learn_git
 

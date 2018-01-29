@@ -90,7 +90,9 @@ copied_im.paste(croped_im,(0,0))
 save_path = r'D:/HelloWorld/learngit/picture fundamental/modified_Xi.jpg'
 copied_im.save(save_path)
 
-
-
+copied2_im = im.copy()
+im2 = copied2_im.resize((500,500),Image.NEAREST)
+save_path = r'D:/HelloWorld/learngit/picture fundamental/fat_Xi.jpg'
+im2.save(save_path)
 
 #im.paste(croped_im, (0, 0))
