@@ -24,58 +24,35 @@ foo(*k) #输出为 1 2
 a = [1,2,3]
 b = [4,5,6]
 c = [4,5,6,7,8]
-zipped = zip(a,b)
-z = list(zipped) #tuple组成的list，呵呵
-print(z[0])
+#zipped = zip(a,b)
+#z = list(zipped) #tuple组成的list，呵呵
+#print(z[0])
 zipped2 = zip(a,c)
-z2 = list(zipped2)
-print(z) #若有多余的，不予配对
+z2 = dict(zipped2)
+z3 = list(zipped2)
+print(z2) #若有多余的，不予配对
+print(z3)
 
 # lambda 匿名函数
-y = lambda x: x+1  # y = x+1
-print(y(1))
+#y = lambda x: x+1  # y = x+1
+#print(y(1))
 
-# from 实验楼
-# -----------------------------------------------------------------------------
-def main(stdscr):
+#actions = ['Up', 'Left', 'Down', 'Right', 'Restart', 'Exit']
+#letter_codes = [ord(ch) for ch in 'WASDRQwasdrq']
+#actions_dict = dict(zip(letter_codes, actions * 2))
+print('----------------------------------------')
+# 转置矩阵
+d = [a,b,c] # 创建一个矩阵（伪），list组成的list
+def transpose(*field):
+    return [list(row) for row in zip(*field)]
+# zip不能直接print，需要通过list或者dict才能出来
+# zip(*field)得到3个tuple组成的zip,for...row 遍历这个zip,并加入list()中
+# 最外面的[]组成一个list
+d_transpose = transpose(a,b,c)
+print(d)
+print(d_transpose)
+print('----------------------------------------')
+from random import randint
+print(randint(1,10))
 
-    def init():
-        #重置游戏棋盘
-        return 'Game'
-
-    def not_game(state):
-        #画出 GameOver 或者 Win 的界面
-        #读取用户输入得到action，判断是重启游戏还是结束游戏
-        responses = defaultdict(lambda: state) #默认是当前状态，没有行为就会一直在当前界面循环
-        responses['Restart'], responses['Exit'] = 'Init', 'Exit' #对应不同的行为转换到不同的状态
-        return responses[action]
-
-    def game():
-        #画出当前棋盘状态
-        #读取用户输入得到action
-        if action == 'Restart':
-            return 'Init'
-        if action == 'Exit':
-            return 'Exit'
-        #if 成功移动了一步:
-            if 游戏胜利了:
-                return 'Win'
-            if 游戏失败了:
-                return 'Gameover'
-        return 'Game'
-
-
-    state_actions = {
-            'Init': init,
-            'Win': lambda: not_game('Win'),
-            'Gameover': lambda: not_game('Gameover'),
-            'Game': game
-        }
-
-    state = 'Init'
-
-    #状态机开始循环
-    while state != 'Exit':
-        state = state_actions[state]()
-
-
+#print(random.randint(1,20))
