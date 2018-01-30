@@ -56,3 +56,10 @@ from random import randint
 print(randint(1,10))
 
 #print(random.randint(1,20))
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+print('----------------------------------------')
+aTuple = ('xyzzaraabc','x');
+aList = list(aTuple)
+ 
+print ("列表元素 : ", aList)
