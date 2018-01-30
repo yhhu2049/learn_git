@@ -1,0 +1,12 @@
+1、Linux中 $开头
+2、python安装模块方法：
+命令行： pip install xx（pip集成于python3）
+3、图像处理：
+PIL在python3中不再支持，改用pillow
+4、pillow函数
+from PIL import ImageColor
+print(ImageColor.getcolor('red', 'RGBA'))
+# 也可以只以RBG的方式查看
+print(ImageColor.getcolor('black', 'RGB'))
+5、图像坐标左上到右下递增
+6、字符串前加r，防止转义s
