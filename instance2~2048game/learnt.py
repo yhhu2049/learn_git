@@ -110,4 +110,73 @@ print(lis)
 lis = [1,2]
 tup = tuple(lis)
 print(tup)
-help(list())
+#help(list())
+
+for i in [(1,2),(1,3)]:
+    print(i)
+h = list(range(0,5))
+print(h)
+
+import os
+print([d for d in os.listdir('.')])
+#help(os.listdir())
+
+L1 = ['hello','World',18,'applE',None]
+for i in L1:
+    if isinstance(i,str):
+        print(i.lower())
+#help(None)
+
+#print(None)
+#if None:
+#    print('...')
+#else:
+#    print('True')
+
+g = (x**2 for x in range(5))
+#next(g)
+for n in g:
+    print(n)
+for n in L1:
+    print(n)
+print('-------------------------')
+def fib(n=2):
+    i = 2
+    L = [1,1]
+    while i<n:
+        add = L[i-2]+L[i-1]
+        L.append(add)
+    return L
+list1 = fib(3)
+print(list1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

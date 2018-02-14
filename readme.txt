@@ -1,1 +1,0 @@
-This is my python learning code.
